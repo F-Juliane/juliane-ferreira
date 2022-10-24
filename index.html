@@ -82,7 +82,7 @@
 						<!-- Contato -->
 							<article id="contato">
 								<h2 class="major">Contato</h2>
-								<form action="https://formsubmit.co/simppod@gmail.com" method="POST">
+								<form onsubmit="sendEmail(); reset(); return false;">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Nome</label>
@@ -105,9 +105,23 @@
 										<li><input type="submit" value="Enviar Mensagem" class="primary" onClick="parent.location='index.html'" /></li>
 										<li><input type="reset" value="Apagar" /></li>
 									</ul>
-									<input type="hidden" name="_captcha" value="false">
-									<input type="hidden" name="_subject" value="Novo email!" />
 								</form>
+								<script src="https://smtpjs.com/v3/smtp.js"></script>
+								<script>
+									function sendEmail(){
+										Email.send({
+											Host : "smtp.gmail.com",
+											Username : "simppod@gmail.com",
+											Password : "SejuLu123",
+											To : 'simppod@gmail.com',
+											From : document.getElementById("email").value,
+											Subject : "Novo email!",
+											Body : document.getElementById("message").value
+										}).then(
+										message => alert("Email enviado com sucesso!")
+										);
+									}
+								</script>
 								<ul class="icons">
 									<li><a href="https://github.com/SIMPPOD/SIMPPOD" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									<li><a href="https://www.instagram.com/simppod_ssd/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
