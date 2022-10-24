@@ -82,7 +82,7 @@
 						<!-- Contato -->
 							<article id="contato">
 								<h2 class="major">Contato</h2>
-								<form method="post" action="#">
+								<form action="mailto:simppod@gmail.com" method="POST" enctype="text/plain" name="form">
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Nome</label>
@@ -91,6 +91,10 @@
 										<div class="field half">
 											<label for="email">Email</label>
 											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field half">
+											<label for="subject">Assunto</label>
+											<input type="text" name="subject" id="assunto" />
 										</div>
 										<div class="field">
 											<label for="message">Mensagem</label>
@@ -103,8 +107,6 @@
 									</ul>
 								</form>
 								<ul class="icons">
-									<!--<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>-->
-									<!--<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>-->
 									<li><a href="https://github.com/SIMPPOD/SIMPPOD" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 									<li><a href="https://www.instagram.com/simppod_ssd/" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
 									<li><a href="https://www.instagram.com/simppod_ssd/" target="_blank" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
@@ -303,15 +305,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 								<section>
 									<h3 class="major">Form</h3>
-									<form method="post" action="simppod@gmail.com">
+									<form method="post" action="/assets/sass/components/_form.scss">
 										<div class="fields">
 											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+												<label for="name">Name</label>
+												<input type="text" name="name" id="name" value="" placeholder="" />
 											</div>
 											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="" />
+												<label for="email">Email</label>
+												<input type="email" name="email" id="email" value="" placeholder="" />
 											</div>
 											<div class="field">
 												<label for="demo-category">Category</label>
